@@ -1,0 +1,108 @@
+#mainDiv {
+  width: 100%;
+  position: absolute;
+}
+#mainDiv #Row1Div {
+  display: block;
+  text-align: center;
+  margin-top: 170px;
+  font-size: 22px;
+}
+#mainDiv #Row1Div h1 {
+  display: block;
+}
+#mainDiv #Row1Div button {
+  padding: 10px 45px;
+  margin-top: 30px;
+  border-radius: 30px;
+  border-style: none;
+  background: #ff9900;
+}
+#mainDiv #Row1Div button:hover {
+  background: #ffb13c;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#mainDiv #Row2Div {
+  width: 100%;
+}
+#mainDiv #Row2Div #KouftElement {
+  width: 70%;
+  background: #3c80ff;
+  margin-right: 15%;
+  margin-top: 50px;
+  border-radius: 30px;
+}
+#mainDiv #Row2Div #KouftElement h1 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+}
+#mainDiv #Row2Div #KouftElement h2 {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  margin-top: 10px;
+}
+#mainDiv #Row2Div #KouftElement button {
+  border-style: none;
+  width: 30%;
+  margin-right: 2.5%;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding: 18px 0px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 20px;
+}
+#mainDiv #Row2Div #KouftElement button:hover {
+  background: #efefef;
+  transition: 0.5s;
+  cursor: pointer;
+}
+@media only screen and (max-width: 950px) {
+  #mainDiv #Row2Div #KouftElement button {
+    width: 35%;
+    margin-right: 10%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  #mainDiv #Row2Div #KouftElement button {
+    width: 70%;
+    margin-right: 15%;
+  }
+}
+#mainDiv #Row3Div h1 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 20px;
+}
+#mainDiv #Row3Div h2 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 12px;
+}
+#mainDiv #Row4Div {
+  width: 70%;
+  margin-right: 15%;
+}
+@media only screen and (max-width: 800px) {
+  #mainDiv #Row4Div {
+    text-align: center;
+  }
+}
+#mainDiv #Row5Div {
+  width: 100%;
+  text-align: center;
+}
+#mainDiv #Row5Div h1 {
+  padding-top: 100px;
+  font-size: 20px;
+}
+#mainDiv #Row5Div h2 {
+  padding-top: 30px;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=main.css.map */
