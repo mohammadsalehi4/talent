@@ -159,8 +159,11 @@
             padding: 10px 15px;
             font-size: 10px;
         }
-        .cvmaking{
-            margin-right: 150px;
+        .cvmaking,.loginBTN{
+            float: left;
+            display: inline-block;
+            margin-right: 0px;
+            margin-left: 20px;
         }
     }
 }

@@ -1,4 +1,9 @@
-import React from 'react'
+import React ,{useState,useEffect} from 'react'
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Slides from '../slides/slides'
 import Questions from '../questions/questions'
 import Footer from '../footer/footer'
@@ -23,11 +28,35 @@ const Main = () => {
       desc:"جلسات به ۲ صورت آنلاین و ویدئویی برگزار خواهند شد. جلسات آنلاین در بستر اسکایپ انجام خواهد شد که در لینک آن را پشتیبان پس از هماهنگی روز و تاریخ جلسه ارسال خواهد کرد. جلسات ویدئویی برای آن دسته از افرادی مناسب است که حضور در جلسه در راس یک تاریخ و زمان مشخص شاید چالش برانگیز باشد. این دسته از افراد صرفا روز جلسه را انتخاب خواهند کرد و در طی آن روز وقت دارند تا در قالب ویس یا ویدئو سلفی چالش کاری خود را برای متخصصین ما در بستر اسکایپ ارسال کنند. متخصصین ما حداکثر پس از ۲۴ ساعت، پاسخ خود را در قالب یک ویدئو سلفی برای کاربر ارسال خواهد کرد. کاربر می‌تواند نسبت به ویدئو ارسالی متخصصین،‌ سوالات و ابهامات خود را مطرح کنند و متخصصین ما نیز پاسخگو خواهند بود."
     }
   ]
+
+  const States = useSelector(state => state);
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    if(States.IsOpenMenu===false){
+      document.getElementById('hidder').style.display='none'
+      document.getElementById("mobileMMenu").style.transform = "translate(0%,0px)";
+    }
+    if(States.IsOpenMenu===true){
+      document.getElementById('hidder').style.display='block'
+      document.getElementById("mobileMMenu").style.transform = "translate(-100%,0px)";
+
+    }
+  },[States.IsOpenMenu])
+
+  const changeOpen=()=>{
+    dispatch({type:"CHANGEMENU",value:false})
+  }
+
+  const scrl=()=>{
+    // window.scroll(0,100)
+  }
+
   return (
     <div id='mainDiv'>
       <div id='Row1Div' className='sans'>
         <h1>کوچینگ شغلی، راهکار توسعه فردی و ارتقا شغلی</h1>
-        <button className='sans'>کوچ فردی</button>
+        <button className='sans' onClick={scrl}>کوچ فردی</button>
       </div>
       <div id='Row2Div'>
         <div id='KouftElement'>
@@ -61,6 +90,16 @@ const Main = () => {
             <Questions key1={index} title={item.title} desc={item.desc}/>
           ))
         }
+      </div>
+      <div id='hidder' onClick={changeOpen}>
+
+      </div>
+      <div id='mobileMMenu'>
+        <a className='MenuLink sans'>کوچینگ شغلی</a>
+        <a className='MenuLink sans'>موقعیت های شغلی</a>
+        <a className='MenuLink sans'>دانشنامه شغلی</a>
+        <a className='MenuLink sans'>شرکت ها</a>
+        <a className='MenuLink sans'>برگزار کنندگان</a>
       </div>
       <Footer/>
     </div>

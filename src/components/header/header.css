@@ -130,8 +130,11 @@
     padding: 10px 15px;
     font-size: 10px;
   }
-  #MainHeader .cvmaking {
-    margin-right: 150px;
+  #MainHeader .cvmaking, #MainHeader .loginBTN {
+    float: left;
+    display: inline-block;
+    margin-right: 0px;
+    margin-left: 20px;
   }
 }
 
