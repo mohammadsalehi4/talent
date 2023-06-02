@@ -111,6 +111,7 @@
 }
 #mainDiv #Row5Div {
   width: 100%;
+  align-items: center;
   text-align: center;
 }
 #mainDiv #Row5Div h1 {
@@ -118,6 +119,18 @@
   font-size: 20px;
 }
 #mainDiv #Row5Div h2 {
+  padding-top: 30px;
+  font-size: 12px;
+}
+#mainDiv #Row6Div {
+  width: 100%;
+  text-align: center;
+}
+#mainDiv #Row6Div h1 {
+  padding-top: 100px;
+  font-size: 20px;
+}
+#mainDiv #Row6Div h2 {
   padding-top: 30px;
   font-size: 12px;
 }

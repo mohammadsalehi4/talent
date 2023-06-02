@@ -1,13 +1,13 @@
 import React ,{useState,useEffect} from 'react'
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 import Slides from '../slides/slides'
 import Questions from '../questions/questions'
 import Footer from '../footer/footer'
+import Slider from '../slider/slider';
 import './main.css'
+import { m } from 'framer-motion';
 
 const Main = () => {
   const data=[
@@ -28,6 +28,20 @@ const Main = () => {
       desc:"جلسات به ۲ صورت آنلاین و ویدئویی برگزار خواهند شد. جلسات آنلاین در بستر اسکایپ انجام خواهد شد که در لینک آن را پشتیبان پس از هماهنگی روز و تاریخ جلسه ارسال خواهد کرد. جلسات ویدئویی برای آن دسته از افرادی مناسب است که حضور در جلسه در راس یک تاریخ و زمان مشخص شاید چالش برانگیز باشد. این دسته از افراد صرفا روز جلسه را انتخاب خواهند کرد و در طی آن روز وقت دارند تا در قالب ویس یا ویدئو سلفی چالش کاری خود را برای متخصصین ما در بستر اسکایپ ارسال کنند. متخصصین ما حداکثر پس از ۲۴ ساعت، پاسخ خود را در قالب یک ویدئو سلفی برای کاربر ارسال خواهد کرد. کاربر می‌تواند نسبت به ویدئو ارسالی متخصصین،‌ سوالات و ابهامات خود را مطرح کنند و متخصصین ما نیز پاسخگو خواهند بود."
     }
   ]
+  const data1=[
+    {
+        address:'image/L1.png',
+        desc:"سطح 1، 250 هزار تومان!"
+    },
+    {
+        address:'image/L2.png',
+        desc:"سطح 2، 450 هزار تومان!"
+    },
+    {
+        address:'image/L3.png',
+        desc:"سطح 3، 650 هزار تومان!"
+    }
+]
 
   const States = useSelector(state => state);
   const dispatch = useDispatch();
@@ -74,6 +88,11 @@ const Main = () => {
         <h1 className='sans'>راه های کوچینگ شغلی</h1>
         <h2 className='sans'>تمام راه ها در سه سطح ارائه شده اند</h2>
       </div>
+      <div id='Row6Div'>
+        <h1 className='sans'>در چه سطحی نیاز به کوچینگ شغلی دارید؟</h1>
+        <h2 className='sans'>سطح متخصصین بر اساس میزان تجربه و سابقه کاری آن‌ها تفکیک شده است</h2>
+        <Slider data={data1}/>
+      </div>
       <div id='Row4Div'>
         <Slides BoxTitle="طراحی مسیر شغلی" Desc="تصمیم گیری بین علاقه، استعداد و پتانسیل کاری در آینده از بین تصمیمات موجود کار راحتی نیست. شما بر اساس علاقه و اهدافتون ارزیابی میشوید و در ادامه بهترین شغل توسط متخصصین ما به شما پیشنهاد میشود." />
         <Slides BoxTitle="طراحی مسیر شغلی" Desc="تصمیم گیری بین علاقه، استعداد و پتانسیل کاری در آینده از بین تصمیمات موجود کار راحتی نیست. شما بر اساس علاقه و اهدافتون ارزیابی میشوید و در ادامه بهترین شغل توسط متخصصین ما به شما پیشنهاد میشود." />
@@ -91,6 +110,7 @@ const Main = () => {
           ))
         }
       </div>
+
       <div id='hidder' onClick={changeOpen}>
 
       </div>

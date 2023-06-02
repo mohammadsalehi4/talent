@@ -1,0 +1,56 @@
+#slider{
+    height: 400px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    background: white;
+    overflow: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+    #mover{
+        height: 400px;
+        display: inline-block;
+        clear: both;
+        position: relative;
+        transition: 0.5s linear;
+        left:0px;
+        .slideBox{
+            height: 400px;
+            display: inline-block;
+            img{
+                margin-top: 20px;
+            }
+            a{
+                font-size: 12px;
+                float: left;
+                margin-left: 20px;
+                margin-top: 60px;
+                color: rgb(60, 128, 255);
+                text-decoration: none;
+            }
+        }
+    }
+    .selectSideBox{
+        position: absolute;
+        border-radius: 50%;
+        background: rgb(243, 243, 243);
+        width: 30px;
+        height: 30px;
+        p{
+            padding-top: 7px;
+        }
+    }
+
+
+    #LeftSide{
+        margin-top: 185px;
+        z-index: 2;
+    }
+    #RightSide{
+        margin-top: -215px;
+        margin-right: 20px;
+        z-index: 2;
+    }
+    
+}
