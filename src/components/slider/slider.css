@@ -22,7 +22,9 @@
   display: inline-block;
 }
 #slider #mover .slideBox img {
-  margin-top: 20px;
+  margin-top: 70px;
+  width: 60%;
+  margin-right: 20%;
 }
 #slider #mover .slideBox a {
   font-size: 12px;
@@ -41,6 +43,7 @@
 }
 #slider .selectSideBox p {
   padding-top: 7px;
+  margin-right: 9px;
 }
 #slider #LeftSide {
   margin-top: 185px;
